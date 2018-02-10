@@ -47,3 +47,29 @@
   $(main);
 
 }(window, jQuery, Rx));
+
+
+// flatMapLatest example
+
+// var source = Rx.Observable
+// .range(1, 3)
+// .flatMapLatest(function(x) {
+//   return Rx.Observable.from([x + 'a', x + 'b']);
+// });
+
+// var subscription = source.subscribe(
+// function (x) {
+//   console.log('Next: %s', x);
+// },
+// function (err) {
+//   console.log('Error: %s', err);
+// },
+// function () {
+//   console.log('Completed');
+// });
+
+// Next: 1a
+// Next: 2a
+// Next: 3a
+// Next: 3b
+// Completed
